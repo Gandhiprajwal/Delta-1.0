@@ -1,0 +1,32 @@
+/* h1{
+    color: blue;
+    background-color: grey;
+}
+p{
+    color: red;
+}
+button{
+    color: gold;
+    background-color:black;
+} */
+
+/* Practice Ques 1 */
+
+h1 {
+    color: orange;
+    text-align: center;
+    font-weight: 900;
+    text-decoration: red wavy line-through;
+    line-height: 20px;
+    letter-spacing: 2rem;
+}
+
+p {
+    color: azure;
+    background-color: black;
+}
+ 
+button {
+    background-color: blue;
+    color: white;
+}
