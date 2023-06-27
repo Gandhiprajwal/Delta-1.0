@@ -1,0 +1,120 @@
+/* <!-- Alpha Channel --> */
+
+div{
+    height: 200px;
+    width: 200px;
+
+    /* rgb(0,0,0,0) - last 0 represent the alpha value in rgb method */
+    /* background-color: rgba(255, 0, 0, 0.253); */
+
+    /* #ffffffff - last 2f show alpha value in Hex Code*/
+    background-color: #fff25fff;
+}
+
+/*  Opacity of Element */
+#opacity{
+    background-color: #ffa511;
+    opacity: 0.6;
+    
+}
+
+/* Transition */
+#trans{
+    height: 200px;
+    width: 200px;
+    background-color: #4dff00ff;
+    margin: 0 auto;
+    transition: transform 2s ease-in 0.5s;
+    
+}
+
+/* #trans:hover{
+    margin-top: 400px;
+    background-color: pink;
+    
+} */
+
+/* Transform & box Shadow*/
+
+section{
+    margin-top: 50px;
+}
+
+.divs{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.divs:nth-of-type(2n){
+    background-color: #f7db6a;
+}
+
+.div:nth-of-type(3n){
+    background-color: #ebb02d;
+}
+
+#one{
+    transform: rotate(-180deg);
+}
+#two{
+    transition: 2s;
+}
+#two:hover{
+    transform: scale(0.5);
+}
+
+#three{
+    transition: 2s;
+}
+
+#three:hover{
+    transform: translate(50px);
+}
+
+#four{
+    transform: skew(-30deg);
+}
+
+#five{
+    /* transform: rotate(30deg) translate(150px); */
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+/* background image */
+
+#img-set{
+    width: 400px;
+    height: 200px;
+    margin: 10px auto;
+    background-color: #7aa874;
+    background-image: url(./img.jpg);
+    background-size: cover;
+}
+
+/* Position */
+.pos{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+
+#static{
+    background-color: yellow;
+    position: static;
+    top: 100px;
+}
+
+#relative{
+    background-color: yellow;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
