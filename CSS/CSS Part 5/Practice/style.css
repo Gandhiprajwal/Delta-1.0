@@ -35,7 +35,7 @@
 
 /* flex-direction & justify-content */
 #container1{
-    height: 300px;
+    height: 600px;
     width: 80%;
     background-color: azure;
     margin: 10px auto;
@@ -48,7 +48,13 @@
     /* flex-wrap */
 
     justify-content: flex-start;
-    flex-wrap: wrap; 
+    /* flex-wrap: wrap;  */
+
+    /* align items */
+    /* align-items: baseline; */
+
+    /* align-content */
+    align-content: center;
 }
 
 h1{
@@ -57,6 +63,21 @@ h1{
 
 .divs{
     height: 100px;
-    width: 300px;
+    width: 50px;
     color: white;
+}
+
+/* align-self */
+
+#orange{
+    /* align-self: center; */
+    /* flex-basis: 50px; */
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+
+#green{
+    /* flex-grow: 2; */
+    /* max-width: 400px; */
+    flex: 2 2 100px;
 }
