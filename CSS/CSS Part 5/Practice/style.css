@@ -32,3 +32,24 @@
     /* display: inline-block; */
     margin: 10px;
 }
+
+/* flex-direction */
+#container1{
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1{
+    text-align: center;
+}
+
+.divs{
+    height: 100px;
+    width: 100px;
+    color: white;
+}
