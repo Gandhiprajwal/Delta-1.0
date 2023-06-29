@@ -1,0 +1,43 @@
+/* Ques 1 */
+#container{
+    height: 400px;
+    width: 400px;
+    border: 3px solid rgba(46, 204, 212, 0.72);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Ques 2 */
+.container1{
+    height: 50px;
+    width: 900px;
+    background-color: lightpink;
+    border:3px solid aqua;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.child{
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-left: 5px;
+    line-height: 50px;
+    display: inline;
+}
