@@ -255,3 +255,122 @@ if((numb1%10) == (numb3%10)){
 else{
     console.log("Both haven't same last digit");
 }
+
+// String Methods
+let str1 = 'ILoveCoding';
+let newStr1 = str1.trim();
+
+// trim() method
+str1.trim();
+
+// .toUpperCase() & .toLowerCase()
+console.log(str1.toLowerCase());
+console.log(str1.toUpperCase());
+
+//indexof(arg)
+console.log(str1.indexOf('Coding'));
+
+// method Chaining
+console.log(str1.toUpperCase().trim());
+
+// slice method
+console.log(str1.slice(5));
+console.log(str1.slice(-7));
+
+// replace
+console.log(str1.replace("Love","do"));
+
+//repeat
+console.log(str1.repeat(2));
+
+// Practice Ques
+let msg = 'hello!';
+console.log(msg.trim().toUpperCase());
+
+let name = 'ApnaCollege';
+console.log(name.slice(4,9));
+console.log(name.indexOf('na'));
+console.log(name.replace("Apna",'Our'));
+
+console.log(name.slice(4).replace('l','t'));
+
+// Arrays - Linear collection of things
+let students = ['Prajwal','Aman','Jethalal'];
+console.log(students);
+// mixed array
+let info = ['Prajwal',19,88.6];
+// empty array
+let empArr = [];
+info[1] = 20;
+
+//Arrays Methods
+let cars = ['Ferrai','Ford','Tata'];
+cars.push('Toyota');
+cars.pop();
+cars.unshift('Maruti');
+cars.shift();
+
+//Practice Ques
+let months = ['January','july','march','august'];
+months.shift();
+months.shift();
+months.unshift('june');
+months.unshift('july');
+
+// Arrays Methods --> Indexof(), includes(),concat(),reverse(),slice(),splice(),sort()
+months.indexOf('july');
+console.log(months.includes('august'));
+// concat
+console.log(months.concat(students));
+//reverse
+console.log(months.reverse());
+//slice
+console.log(months.slice(2));
+console.log(months.slice(-3));
+//splice
+console.log(months.splice(3));
+// console.log(months.splice(0,1));
+console.log(months.splice(0,2));
+console.log(months.splice(1,0,'Janauary'));
+console.log();
+//sort
+console.log(months .sort());
+
+//Practice Ques
+months = ['January','july','march','august'];
+months.splice(0,2,'july','june');
+
+// 2-dimensional Array
+let nums = [[1,2],[3,4],[5,6]];
+
+// Pratice Ques
+// tic-tac-toe
+let gameBoard = [['X',null,'O'],[null,'X',null],['O',null,'X']];
+gameBoard[0][1] = 'O';
+
+// Assignments
+//Ques 1
+let arr=[7,9,0,-2];
+console.log(arr.slice(0,3));
+//Ques 2
+console.log(arr.slice(-3));
+//Ques 3
+str = "";
+if(str.length==0){
+    console.log('string is empty');
+}
+else{
+    console.log('string is not empty');
+}
+//Ques 4
+str = 'ApNaCollege';
+if(str[0] == str[0].toLowerCase()){
+    console.log('character is lowercase.');
+}
+else{
+    console.log('character is not lowercase');
+}
+//Ques 5
+//.trim(); -->Answer
+//Ques 6
+//.indexof(arg) == tocheck -->Answer
