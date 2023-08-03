@@ -1,0 +1,35 @@
+header,
+article,
+aside,
+footer {
+    border: 2px solid;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "side content content"
+        "foot foot foot";
+    grid-template-rows: 10vh 80vh 10vh;
+}
+@media(max-width:800px){
+    main{
+        display: flex;
+    }
+}
+header {
+    grid-area: head;
+}
+
+article {
+    grid-area: content;
+}
+
+aside {
+    grid-area: side;
+}
+
+footer {
+    grid-area: foot;
+}
