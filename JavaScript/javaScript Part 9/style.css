@@ -28,3 +28,24 @@ body {
 #description {
   background-color: antiquewhite;
 }
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}
+
+.box1{
+  border: 1px solid black;
+  background-color: pink;
+}
+
+.btn{
+  background-color: blue;
+  color: white;
+}
+
+.purple{
+  color: purple;
+  text-decoration: underline;
+}

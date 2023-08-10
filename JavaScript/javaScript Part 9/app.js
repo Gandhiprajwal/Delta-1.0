@@ -50,3 +50,59 @@ body.appendChild(p);
 // Removing Elements
 body.removeChild(p);
 // body.remove();
+
+
+// Practice Ques
+// Ques 1
+let para = document.createElement('p');
+para.innerText = "Hey, I am Red!";
+document.querySelector('body').append(para);
+para.classList.add('red');
+
+// Ques 2
+let h3 = document.createElement('h3');
+h3.innerText = "I'm blue h3!";
+document.querySelector('body').append(h3);
+h3.classList.add('blue');
+
+// Ques 3
+let div = document.createElement('div');
+let h1 = document.createElement('h1');
+let para1 = document.createElement('p');
+
+h1.innerText = "I'm in a div";
+para1.innerText = "ME TOO!";
+div.append(h1);
+div.append(para1);
+
+div.classList.add("box1");
+
+document.querySelector('body').append(div);
+
+// Assignment 
+// Ques 1
+let input = document.createElement('input');
+let button = document.createElement('button');
+
+button.innerText = 'Click me';
+document.querySelector('body').append(input);
+document.querySelector('body').append(button);
+
+// Ques 2
+input.placeholder = 'username';
+button.setAttribute('id','btn');
+
+// Ques 3
+button.classList.add('btn');
+
+// Ques 4
+let h11 = document.createElement('h1');
+h11.innerText = 'DOM Practice';
+h11.classList.add('purple');
+document.querySelector('body').append(h11);
+
+// Ques 5
+let para2 = document.querySelector('p');
+para2.innerHTML = "Apna College <b>Delta</b> Practice";
+para.classList.add('para2');
+document.querySelector('body').append(para2);
