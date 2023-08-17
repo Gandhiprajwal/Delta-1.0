@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Projects/Spotify Clone/index.html"
+    "livePreview.defaultPreviewPath": "/Projects/Spotify Clone/index.html",
+    "liveServer.settings.port": 5501
 }
