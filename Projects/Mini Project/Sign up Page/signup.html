@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | Mini Project</title>
+    <title>Sign Up | Mini Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="box">
+    <div class="box" id="box">
         <span class="borderline"></span>
         <form action="#">
-            <h2>Sign In</h2>
+            <h2>Sign Up</h2>
             <div class="inputBox">
                 <input type="text" required placeholder="Username">
                 <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" required placeholder="E-mail">
+                <span>E-mail</span>
                 <i></i>
             </div>
             <div class="inputBox">
@@ -26,10 +27,10 @@
                 <i></i>
             </div>
             <div class="links">
-                <a href="./forget-pass.html" id="forget_pass">Forget Password ?</a>
-                <a href="./signup.html" id="sign_up">Sign Up</a>
+                <!-- <a href="#" id="forget_pass">Forget Password ?</a> -->
+                <a href="./index.html" id="sign_up">Sign In</a>
             </div>
-            <input type="submit" value="Login" id="login_btn">
+            <input type="submit" value="Register" id="login_btn">
         </form>
     </div>
 </body>

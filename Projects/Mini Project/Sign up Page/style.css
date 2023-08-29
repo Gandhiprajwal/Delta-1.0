@@ -13,6 +13,14 @@ body{
     background: #23242a;
 }
 
+#box{
+    height: 500px;
+}
+
+#box1{
+    height: 400px;
+}
+
 .box{
     position: relative;
     width: 380px;
