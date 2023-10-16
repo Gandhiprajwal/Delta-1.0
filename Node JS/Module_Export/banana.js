@@ -1,4 +1,2 @@
-module.exports = {
-    name:"banana",
-    color:"yellow",
-};
+export const name = "banana";
+export const color = "yellow";

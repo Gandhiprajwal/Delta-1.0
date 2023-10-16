@@ -4,12 +4,21 @@ for (let i = 2; i < name.length; i++) {
   console.log("Hello to ", name[i]);
 }
 
-const someValue = require("./math");
+import { sum } from "./math";
 
-console.log(someValue.sum(2, 5));
+console.log(sum(2, 5));
 
-const info = require("./Module_Export");
+// const info = require("./Module_Export");
 
-console.log(info);
+// console.log(info);
 
+// const figlet = require("figlet");
 
+// figlet("Prajwal Gandhi", function (err, data) {
+//   if (err) {
+//     console.log("Something went wrong...");
+//     console.dir(err);
+//     return;
+//   }
+//   console.log(data);
+// });
