@@ -43,6 +43,15 @@ app.get("/ig/:username",(req,res)=>{
     let {username} = req.params;
     const instaData = require("./data.json");
     const data = instaData[username];
-    console.log(data);
+    if(data == undefined){
+        res.render("error"); 
+    }
+    else{
+    // console.log(data);
     res.render("instagram_EJS.ejs",{data,username});
+    }
 });
+
+// Serving Static files
+// app.use(exprees.static("public"));
+app.use(exprees.static(path.join(__dirname,"public/css")));
