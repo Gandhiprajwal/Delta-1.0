@@ -6,8 +6,8 @@ const path = require("path");
 
 const port = 8080;
 
-app.set("view engine","ejs");
-app.set("views",path.join(__dirname,"/views"));
+app.set("view engine","ejs");  // locally search views folder
+app.set("views",path.join(__dirname,"/views"));      // globally search by using path.join()
 
 app.get("/",(req,res)=>{
     res.render("home");
