@@ -26,6 +26,9 @@
 - eg. MongoDb,Cassandra,Neo4j etc.
 ---
 
-#### For more Detils --> [MySQL](https://www.w3schools.com/MySQL/default.asp)
+#### For more Detils 
+--> [MySQL](https://www.w3schools.com/MySQL/default.asp)
+
+--> [SQL](https://www.w3schools.com/sql/)
 
 
