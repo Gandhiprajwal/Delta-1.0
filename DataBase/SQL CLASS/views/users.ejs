@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        table,tr,th,td{
+            border: 1px solid;
+            font-size: 1.25rem;
+        }
+        button{
+            background-color: #fff;
+            border-radius: 24px;
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+        }
+        button a{
+            color: #000000;
+        }
+        div{
+            display: flex;
+            width: 60%;
+        }
+    </style>
+    <title>Users Details</title>
+  </head>
+  <body>
+    <div>
+    <button><a href="/user/new">Add new User</a></button>
+    </div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    <% for(data of data){ %> 
+        <tr>
+            <td><%=data.id%></td>
+            <td><%=data.username%></td>
+            <td><%=data.email%></td>
+            <td>
+            <form action="/user/<%=data.id%>/edit" method="GET">
+                <button>Edit Username</button>
+            </form>
+        </td>
+        <td><button><a href="/user/<%=data.id%>/delete">Delete</a></button></td>
+        </tr>
+        <%}%>
+    </table>
+  </body>
+</html>
