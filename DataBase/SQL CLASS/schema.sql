@@ -17,3 +17,7 @@ SELECT * from user;
 TRUNCATE TABLE user;
 
 SELECT * from user;
+
+select count(*) from user;
+
+select * from user where email="Norval13@gmail.com";
