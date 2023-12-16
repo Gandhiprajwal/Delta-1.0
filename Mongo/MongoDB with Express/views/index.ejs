@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Chats</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3>All Chats!</h3>
+    <form action="/chats/new" method="GET">
+        <button>New Chat</button>
+    </form>
+    <br>
+    <%for(let chat of chats){%>
+    <div class="chat">
+      <p>From: <i><%= chat.from %></i></p>
+      <div class="msg">
+        <p>Message: <%= chat.msg %></p>
+      </div>
+      <p>Received By: <i><%= chat.to %></i></p>
+      <hr>
+    </div>
+    <br><br>
+    <%}%>
+  </body>
+</html>
