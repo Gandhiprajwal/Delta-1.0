@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fake Chats</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h3>All Chats!</h3>
     <form action="/chats/new" method="GET">
-        <button>New Chat</button>
+      <button>New Chat</button>
     </form>
-    
-    <br>
+
+    <br />
     <%for(let chat of chats){%>
     <div class="chat">
       <p>From: <i><%= chat.from %></i></p>
@@ -23,14 +23,19 @@
         <form action="/chats/<%=chat._id%>?_method=DELETE" method="POST">
           <button>Delete</button>
         </form>
+        <form action="/chats/<%=chat._id%>">
+          <button>Show</button>
+        </form>
         <p>Message: <%= chat.msg %></p>
       </div>
       <p>Received By: <i><%= chat.to %></i></p>
-      <hr>
+      <hr />
       <p>Time: <%=chat.created_at.toString().split(" ")[4]%></p>
-      <p>Date: <%=chat.created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+      <p>
+        Date: <%=chat.created_at.toString().split(" ").slice(0,4).join(" ")%>
+      </p>
     </div>
-    <br><br>
+    <br /><br />
     <%}%>
   </body>
 </html>
