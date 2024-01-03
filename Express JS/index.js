@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-console.log(app);
+// console.log(app);
 
 let port = 3000;
 
