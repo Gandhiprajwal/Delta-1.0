@@ -2,12 +2,14 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function TodoList() {
-  let [tasks, setTasks] = useState([{ task: "sample-task", id: uuidv4() }]);
+  let [tasks, setTasks] = useState([
+    { task: "sample-task", id: uuidv4(), isDone: false },
+  ]);
   let [newTasks, setNewTodo] = useState("");
 
   let addNewTaks = () => {
     setTasks((prevTodo) => {
-      return [...prevTodo, { task: newTasks, id: uuidv4() }];
+      return [...prevTodo, { task: newTasks, id: uuidv4(), isDone: false }];
     });
   };
 
@@ -19,27 +21,55 @@ export default function TodoList() {
     setTasks(() => tasks.filter((prevTodo) => prevTodo.id != id));
   };
 
-  let upperCaseAll = () => {
+  // let upperCaseAll = () => {
+  //   tasks.map(() => {
+  //     setTasks((prevTasks) =>
+  //       prevTasks.map((todo) => {
+  //         return {
+  //           ...todo,
+  //           task: todo.task.toUpperCase(),
+  //         };
+  //       })
+  //     );
+  //   });
+  // };
+  let markAllasDone = () => {
     tasks.map(() => {
       setTasks((prevTasks) =>
         prevTasks.map((todo) => {
           return {
             ...todo,
-            task: todo.task.toUpperCase(),
+            isDone: true,
           };
         })
       );
     });
   };
 
-  let upperCaseOne = (id) => {
+  // let upperCaseOne = (id) => {
+  //   tasks.map(() => {
+  //     setTasks((prevTasks) =>
+  //       prevTasks.map((todo) => {
+  //         if (todo.id === id) {
+  //           return {
+  //             ...todo,
+  //             task: todo.task.toUpperCase(),
+  //           };
+  //         } else {
+  //           return todo;
+  //         }
+  //       })
+  //     );
+  //   });
+  // };
+  let markAsDone = (id) => {
     tasks.map(() => {
       setTasks((prevTasks) =>
         prevTasks.map((todo) => {
           if (todo.id === id) {
             return {
               ...todo,
-              task: todo.task.toUpperCase(),
+              isDone: true,
             };
           } else {
             return todo;
@@ -67,21 +97,24 @@ export default function TodoList() {
         {tasks.map((todo) => {
           return (
             <li key={todo.id}>
-              <span>
-                {todo.task} &nbsp; &nbsp;
-                <button onClick={() => deleteTodo(todo.id)}>Delete</button>{" "}
-                &nbsp; &nbsp;
-                <button onClick={() => upperCaseOne(todo.id)}>
-                  UpperCase One
-                </button>
+              <span
+                style={
+                  todo.isDone ? { textDecorationLine: "line-through" } : {}
+                }
+              >
+                {todo.task}
               </span>
+              &nbsp; &nbsp;
+              <button onClick={() => deleteTodo(todo.id)}>Mark All Done</button> &nbsp;
+              &nbsp;
+              <button onClick={() => markAsDone(todo.id)}>Mark Done</button>
             </li>
           );
         })}
       </ul>
       <br />
       <br />
-      <button onClick={upperCaseAll}>UpperCase All</button>
+      <button onClick={markAllasDone}>UpperCase All</button>
     </>
   );
 }
