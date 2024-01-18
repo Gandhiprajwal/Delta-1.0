@@ -1,8 +1,8 @@
 import "./App.css";
-import Ticket from "./Ticket";
+// import Ticket from "./Ticket.jsx";
 // import LudoBoard from './LudoBoard'
 // import TodoList from "./TodoList";
-// import LotteryTicket from "./LotteryTicket";
+import LotteryTicket from "./LotteryTicket";
 // import TicketNum from "./TicketNum";
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
       {/* <LudoBoard/> */}
       {/* <TodoList/> */}
       {/* <LotteryTicket /> */}
-      <Ticket ticket={[0,1,2,3]} />
+      {/* <Ticket ticket={[5,6,8]}/>
+      <Ticket ticket={[1,2,3,4,5]}/> */}
+      <LotteryTicket n={3} winningSum={15}/>
     </>
   );
 }

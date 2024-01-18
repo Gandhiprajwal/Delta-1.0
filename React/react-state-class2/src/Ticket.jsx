@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
 import TicketNum from "./TicketNum";
-
+import "./Ticket.css";
 export default function Ticket({ ticket }) {
   return (
-    <div>
-      {ticket.map((num, idx) => {
-        <TicketNum num={num} key={idx} />;
-      })}
+    <div className="Ticket">
+      <p>Ticket</p>
+      {ticket.map((num, index) => (
+        <TicketNum key={index} num={num} />
+      ))}
     </div>
-  ); 
+  );
 }
 
 Ticket.propTypes = {
