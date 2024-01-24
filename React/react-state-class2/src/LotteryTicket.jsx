@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { getTicket, sum } from "./helper";
+import { getTicket} from "./helper";
 import Ticket from "./Ticket";
 import PropTypes from "prop-types";
 
-export default function LotteryTicket({ n=3, winningSum=15 }) {
+export default function LotteryTicket({ n=3, winCondition}) {
   let [number, setNumber] = useState(getTicket(n));
-  let isWinning = sum(number) === winningSum;
+  let isWinning = winCondition(number);
   let generateLottery = () => {
     setNumber(getTicket(n));
   };
@@ -18,6 +18,11 @@ export default function LotteryTicket({ n=3, winningSum=15 }) {
     </>
   );
 }
+
+LotteryTicket.propTypes = {
+  n: PropTypes.number.isRequired,
+  winCondition: PropTypes.func.isRequired,
+};
 
 LotteryTicket.propTypes = {
   n: PropTypes.number.isRequired,
